@@ -1,0 +1,502 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="Main_pane" prefHeight="404.0" prefWidth="932.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.group_project.Controllers.Mainpage_Controller">
+   <children>
+      <ToolBar layoutY="6.0" prefHeight="56.0" prefWidth="807.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="0.0">
+        <items>
+          <Button mnemonicParsing="false" onAction="#Add_user" prefHeight="38.0" prefWidth="162.0" style="-fx-border-color: Gray; -fx-border-width: 2; -fx-background-color: #000099;" text="Add User" textFill="#f4efef">
+               <font>
+                  <Font name="Times New Roman Bold" size="18.0" />
+               </font>
+            </Button>
+            <Button layoutX="10.0" layoutY="14.0" mnemonicParsing="false" onAction="#Addbook" prefHeight="38.0" prefWidth="170.0" style="-fx-border-color: Gray; -fx-border-width: 2; -fx-background-color: #DD9900;" text="Add book" textFill="#f7f1f1">
+               <font>
+                  <Font name="Times New Roman Bold" size="18.0" />
+               </font>
+            </Button>
+            <Button layoutX="215.0" layoutY="14.0" mnemonicParsing="false" onAction="#borrower_records" prefHeight="38.0" prefWidth="189.0" style="-fx-border-color: Gray; -fx-border-width: 2; -fx-background-color: #005533;" text="Borrowers Records" textFill="#fcfbfb">
+               <font>
+                  <Font name="Times New Roman Bold" size="18.0" />
+               </font>
+            </Button>
+            <Button layoutX="317.0" layoutY="14.0" mnemonicParsing="false" onAction="#Return_book" prefHeight="38.0" prefWidth="131.0" style="-fx-border-color: Gray; -fx-border-width: 2; -fx-background-color: #770033;" text="Return Book" textFill="#ece6e6">
+               <font>
+                  <Font name="Times New Roman Bold" size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="btn_student" layoutX="420.0" layoutY="14.0" mnemonicParsing="false" onAction="#StudentShow" prefHeight="38.0" prefWidth="137.0" style="-fx-border-color: Gray; -fx-border-width: 2;" text="Student">
+               <font>
+                  <Font name="Times New Roman Bold" size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="logout" layoutX="522.0" layoutY="14.0" mnemonicParsing="false" onAction="#Logout" prefHeight="38.0" prefWidth="98.0" style="-fx-border-color: Gray; -fx-border-width: 2;" text="Logout">
+               <font>
+                  <Font name="Times New Roman Bold" size="18.0" />
+               </font>
+            </Button>
+        </items>
+      </ToolBar>
+      <Separator layoutX="-5.0" layoutY="57.0" prefHeight="3.0" prefWidth="987.0" style="-fx-background-color: gray;" />
+      <ImageView fitHeight="150.0" fitWidth="214.0" layoutX="35.0" layoutY="119.0" opacity="0.73" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="204.0" AnchorPane.leftAnchor="35.0" AnchorPane.rightAnchor="737.0" AnchorPane.topAnchor="119.0">
+         <image>
+            <Image url="@../../../student-reading-books-shows-learning.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="150.0" fitWidth="138.0" layoutX="385.0" layoutY="83.0" opacity="0.73" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../student-carrying-books-showing-education_G1dt5VDd_600x.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="180.0" fitWidth="182.0" layoutX="758.0" layoutY="106.0" opacity="0.73" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../students-reading-books-showing-academic_f1w0L4v__thumb.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="198.0" fitWidth="198.0" layoutX="402.0" layoutY="246.0" opacity="0.73" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../students-reading-books-shows-education.jpg" />
+         </image>
+      </ImageView>
+      <AnchorPane fx:id="pane_user" layoutX="19.0" layoutY="65.0" prefHeight="381.0" prefWidth="987.0" style="-fx-background-color: white;" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="56.39999999999998">
+         <children>
+            <ImageView fitHeight="180.0" fitWidth="174.0" layoutX="21.0" layoutY="81.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../58e8ff68eb97430e819064d0.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="289.0" layoutY="135.0" text="Last name">
+               <font>
+                  <Font name="Times New Roman Bold" size="18.0" />
+               </font>
+            </Label>
+            <Separator layoutX="249.0" layoutY="7.0" orientation="VERTICAL" prefHeight="406.0" prefWidth="6.0" style="-fx-background-color: gray;" AnchorPane.bottomAnchor="0.0" />
+            <Label layoutX="290.0" layoutY="175.0" text="First name">
+               <font>
+                  <Font name="Times New Roman Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="293.0" layoutY="213.0" text="Email">
+               <font>
+                  <Font name="Times New Roman Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="291.0" layoutY="251.0" text="Location">
+               <font>
+                  <Font name="Times New Roman Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="288.0" layoutY="289.0" text="Password">
+               <font>
+                  <Font name="Times New Roman Bold" size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="Lname_user" layoutX="397.0" layoutY="127.0" prefHeight="26.0" prefWidth="290.0" promptText="Enter last name">
+               <font>
+                  <Font name="Times New Roman Bold" size="18.0" />
+               </font>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </TextField>
+            <TextField fx:id="Fname_user" layoutX="397.0" layoutY="167.0" prefHeight="26.0" prefWidth="290.0" promptText="Enter first name">
+               <font>
+                  <Font name="Times New Roman Bold" size="18.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="email_user" layoutX="397.0" layoutY="205.0" prefHeight="26.0" prefWidth="290.0" promptText="Enter email">
+               <font>
+                  <Font name="Times New Roman Bold" size="18.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="Addess_uer" layoutX="397.0" layoutY="245.0" prefHeight="26.0" prefWidth="290.0" promptText="Enter location">
+               <font>
+                  <Font name="Times New Roman Bold" size="18.0" />
+               </font>
+            </TextField>
+            <PasswordField fx:id="pass_user" layoutX="397.0" layoutY="282.0" prefHeight="26.0" prefWidth="290.0" promptText="Enter password">
+               <font>
+                  <Font name="Times New Roman Bold" size="18.0" />
+               </font>
+            </PasswordField>
+            <Button layoutX="426.0" layoutY="346.0" mnemonicParsing="false" onAction="#Submitt_user" prefHeight="50.0" prefWidth="246.0" style="-fx-background-color: #663300;" text="Submit" textFill="#fcf6f6">
+               <font>
+                  <Font name="Times New Roman Bold" size="18.0" />
+               </font>
+            </Button>
+            <Separator layoutX="311.0" layoutY="334.0" prefHeight="3.0" prefWidth="730.0" AnchorPane.rightAnchor="0.0" />
+            <AnchorPane fx:id="pane_student" prefHeight="342.0" prefWidth="821.0" style="-fx-background-color: white;" visible="false">
+               <children>
+                  <ImageView fitHeight="240.0" fitWidth="200.0" layoutX="23.0" layoutY="55.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../students-reading-books-showing-academic_f1w0L4v__thumb.jpg" />
+                     </image>
+                  </ImageView>
+                  <Separator layoutX="254.0" layoutY="-1.0" orientation="VERTICAL" prefHeight="349.0" prefWidth="6.0" style="-fx-background-color: gray;" />
+                  <Separator layoutX="260.0" layoutY="284.0" prefHeight="3.0" prefWidth="558.0" />
+                  <Label layoutX="282.0" layoutY="27.0" text="Student fullname">
+                     <font>
+                        <Font name="Times New Roman Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="282.0" layoutY="64.0" text="Staff fullname">
+                     <font>
+                        <Font name="Times New Roman Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="282.0" layoutY="96.0" text="Number of copies">
+                     <font>
+                        <Font name="Times New Roman Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="282.0" layoutY="174.0" text="Due Date">
+                     <font>
+                        <Font name="Times New Roman Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="282.0" layoutY="210.0" text="Label" />
+                  <Label layoutX="282.0" layoutY="137.0" text="Release Date">
+                     <font>
+                        <Font name="Times New Roman Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="282.0" layoutY="246.0" text="Label" />
+                  <TextField layoutX="448.0" layoutY="24.0" prefHeight="26.0" prefWidth="315.0" />
+                  <TextField layoutX="448.0" layoutY="61.0" prefHeight="26.0" prefWidth="315.0" />
+                  <TextField layoutX="448.0" layoutY="93.0" prefHeight="26.0" prefWidth="315.0" />
+                  <TextField layoutX="448.0" layoutY="171.0" prefHeight="26.0" prefWidth="315.0" />
+                  <TextField layoutX="449.0" layoutY="135.0" prefHeight="26.0" prefWidth="315.0" />
+               </children>
+            </AnchorPane>
+            <Button layoutX="672.0" layoutY="39.0" mnemonicParsing="false" onAction="#Delete_user" prefHeight="34.0" prefWidth="82.0" style="-fx-background-color: #663300;" text="Delete" textFill="#f7f2f2">
+               <font>
+                  <Font name="Times New Roman Bold" size="18.0" />
+               </font>
+            </Button>
+            <TextField fx:id="Txt_del_user" layoutX="759.0" layoutY="40.0" prefHeight="33.0" prefWidth="215.0" promptText="Enter last name to delete" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="pane_book" layoutX="20.0" layoutY="78.0" prefHeight="413.0" prefWidth="987.0" style="-fx-background-color: white;" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="56.39999999999998">
+         <children>
+            <ImageView fitHeight="238.0" fitWidth="200.0" layoutX="27.0" layoutY="51.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../student-carrying-books-showing-education_G1dt5VDd_600x.jpg" />
+               </image>
+            </ImageView>
+            <Separator layoutX="260.0" orientation="VERTICAL" prefHeight="414.0" prefWidth="6.0" style="-fx-background-color: gray;" />
+            <Separator layoutX="270.0" layoutY="341.0" prefHeight="3.0" prefWidth="716.0" />
+            <Button layoutX="461.0" layoutY="352.0" mnemonicParsing="false" onAction="#bk_submit" prefHeight="50.0" prefWidth="234.0" style="-fx-background-color: #DD9900;" text="Submit" textFill="#fcf6f6">
+               <font>
+                  <Font name="Times New Roman Bold" size="18.0" />
+               </font>
+            </Button>
+            <Label layoutX="286.0" layoutY="43.0" text="Book Title">
+               <font>
+                  <Font name="Times New Roman Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="289.0" layoutY="87.0" text="Book Edition">
+               <font>
+                  <Font name="Times New Roman Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="289.0" layoutY="125.0" text="Book Author">
+               <font>
+                  <Font name="Times New Roman Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="284.0" layoutY="164.0" text="Book Publisher">
+               <font>
+                  <Font name="Times New Roman Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="283.0" layoutY="206.0" text="Book Copies">
+               <font>
+                  <Font name="Times New Roman Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="288.0" layoutY="242.0" text="Book Source">
+               <font>
+                  <Font name="Times New Roman Bold" size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="bk_title" layoutX="403.0" layoutY="39.0" prefHeight="26.0" prefWidth="206.0" promptText="Enter book ttile" style="-fx-background-color: #335500;">
+               <font>
+                  <Font name="Times New Roman Bold" size="18.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="bk_edition" layoutX="403.0" layoutY="81.0" prefHeight="26.0" prefWidth="206.0" promptText="Enter book edition" style="-fx-background-color: #335500;">
+               <font>
+                  <Font name="Times New Roman Bold" size="18.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="bk_author" layoutX="406.0" layoutY="122.0" prefHeight="26.0" prefWidth="206.0" promptText="Enter book author" style="-fx-background-color: #335500;">
+               <font>
+                  <Font name="Times New Roman Bold" size="18.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="bk_publisher" layoutX="406.0" layoutY="160.0" prefHeight="26.0" prefWidth="206.0" promptText="Enter book publisher" style="-fx-background-color: #335500;">
+               <font>
+                  <Font name="Times New Roman Bold" size="18.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="bk_copies" layoutX="407.0" layoutY="200.0" prefHeight="26.0" prefWidth="206.0" promptText="Enter book copies" style="-fx-background-color: #335500;">
+               <font>
+                  <Font name="Times New Roman Bold" size="18.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="bk_source" layoutX="406.0" layoutY="236.0" prefHeight="26.0" prefWidth="206.0" promptText="Enter book source" style="-fx-background-color: #335500;">
+               <font>
+                  <Font name="Times New Roman Bold" size="18.0" />
+               </font>
+            </TextField>
+            <Separator layoutX="707.0" layoutY="2.0" orientation="VERTICAL" prefHeight="340.0" prefWidth="6.0" style="-fx-background-color: gray;" />
+            <ImageView fitHeight="162.0" fitWidth="170.0" layoutX="756.0" layoutY="48.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../students-reading-books-shows-education.jpg" />
+               </image>
+            </ImageView>
+            <TextField fx:id="Txt_Bk_del" layoutX="723.0" layoutY="220.0" prefHeight="26.0" prefWidth="225.0" promptText="Enter author or Title to delete" />
+            <Button layoutX="824.0" layoutY="269.0" mnemonicParsing="false" onAction="#bk_delete" prefHeight="34.0" prefWidth="110.0" text="Delete">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="pane_borrower_record" layoutX="28.0" layoutY="78.0" prefHeight="414.0" prefWidth="987.0" style="-fx-background-color: white;" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="56.39999999999998">
+         <children>
+            <Separator layoutX="218.0" orientation="VERTICAL" prefHeight="414.0" prefWidth="6.0" style="-fx-background-color: gray;" AnchorPane.bottomAnchor="0.0" />
+            <ImageView fitHeight="182.0" fitWidth="200.0" layoutX="21.0" layoutY="78.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../student-reading-books-shows-learning.jpg" />
+               </image>
+            </ImageView>
+            <Separator layoutX="280.6" layoutY="335.0" prefHeight="3.0" prefWidth="762.0" AnchorPane.rightAnchor="0.0" />
+            <Button layoutX="458.0" layoutY="348.0" mnemonicParsing="false" onAction="#submit_borrower" prefHeight="50.0" prefWidth="246.0" style="-fx-background-color: #005533;" text="Submit" textFill="#f7f2f2">
+               <font>
+                  <Font name="Times New Roman Bold" size="18.0" />
+               </font>
+            </Button>
+            <Label layoutX="237.0" layoutY="100.0" text="Book_id">
+               <font>
+                  <Font name="Times New Roman" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="601.0" layoutY="131.0" text="Staff fullname">
+               <font>
+                  <Font name="Times New Roman" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="644.0" layoutY="280.0" text="Due Date">
+               <font>
+                  <Font name="Times New Roman" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="628.0" layoutY="234.0" text="Date Release">
+               <font>
+                  <Font name="Times New Roman" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="232.0" layoutY="290.0" text="Number of copies">
+               <font>
+                  <Font name="Times New Roman" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="236.0" layoutY="144.0" text="Book_Title">
+               <font>
+                  <Font name="Times New Roman" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="251.0" layoutY="194.0" text="Student_id">
+               <font>
+                  <Font name="Times New Roman" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="229.0" layoutY="242.0" text="Student fullname">
+               <font>
+                  <Font name="Times New Roman" size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="bookid_borr" layoutX="324.0" layoutY="88.0" prefHeight="33.0" prefWidth="189.0" promptText="Enter the book ID">
+               <font>
+                  <Font name="Times New Roman" size="18.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="booktitle_borr" layoutX="346.0" layoutY="136.0" promptText="Enter book Title">
+               <font>
+                  <Font name="Times New Roman" size="18.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="studname_borr" layoutX="355.0" layoutY="234.0" promptText="Enter Student fullname">
+               <font>
+                  <Font name="Times New Roman" size="18.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="studid_borr" layoutX="354.0" layoutY="187.0" prefHeight="33.0" prefWidth="200.0" promptText="Enter student_id">
+               <font>
+                  <Font name="Times New Roman" size="18.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="Nocopies_borr" layoutX="369.0" layoutY="283.0" promptText="Enter the copies of the books">
+               <font>
+                  <Font name="Times New Roman" size="18.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="Daterelease_borr" layoutX="737.0" layoutY="221.0" promptText="Enter the release date">
+               <font>
+                  <Font name="Times New Roman" size="18.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="duedate_borr" layoutX="737.0" layoutY="271.0" promptText="Enter the due date">
+               <font>
+                  <Font name="Times New Roman" size="18.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="staffname_borr" layoutX="733.0" layoutY="128.0" promptText="Enter staff fullname">
+               <font>
+                  <Font name="Times New Roman" size="18.0" />
+               </font>
+            </TextField>
+            <Label layoutX="644.0" layoutY="186.0" text="Staff ID">
+               <font>
+                  <Font name="Times New Roman" size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="staffid_borr" layoutX="737.0" layoutY="177.0" promptText="Enter the due date">
+               <font>
+                  <Font name="Times New Roman" size="18.0" />
+               </font>
+            </TextField>
+            <Button layoutX="648.0" layoutY="21.0" mnemonicParsing="false" onAction="#Delete_Borrow" prefHeight="33.0" prefWidth="95.0" style="-fx-background-color: #005533;" text="Delete" textFill="#f2ecec">
+               <font>
+                  <Font name="Times New Roman Bold" size="18.0" />
+               </font>
+            </Button>
+            <TextField fx:id="Txt_Delete_Borrow" layoutX="747.0" layoutY="19.0" prefHeight="34.0" prefWidth="190.0" promptText="Enter book Title to delete" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="pane_returnbook" layoutX="59.0" layoutY="122.0" prefHeight="390.0" prefWidth="986.0" style="-fx-background-color: white;" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="56.39999999999998">
+         <children>
+            <Separator layoutX="221.0" layoutY="339.0" prefHeight="3.0" prefWidth="762.0" />
+            <Separator layoutX="218.0" layoutY="9.0" orientation="VERTICAL" prefHeight="406.0" prefWidth="0.0" style="-fx-background-color: gray;" />
+            <Button layoutX="450.0" layoutY="352.0" mnemonicParsing="false" onAction="#SubmitReturnbk" prefHeight="50.0" prefWidth="182.0" style="-fx-background-color: #770033;" text="Submit" textFill="#faf8f8">
+               <font>
+                  <Font name="Times New Roman Bold" size="18.0" />
+               </font>
+            </Button>
+            <Label layoutX="242.0" layoutY="143.0" text="Book Id">
+               <font>
+                  <Font name="Times New Roman" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="242.0" layoutY="176.0" text="Book Title">
+               <font>
+                  <Font name="Times New Roman" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="242.0" layoutY="210.0" text="Student ID">
+               <font>
+                  <Font name="Times New Roman" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="242.0" layoutY="253.0" text="Student fullname">
+               <font>
+                  <Font name="Times New Roman" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="605.0" layoutY="179.0" text="Number of copies">
+               <font>
+                  <Font name="Times New Roman" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="247.0" layoutY="297.0" text="Staff fullname">
+               <font>
+                  <Font name="Times New Roman" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="613.0" layoutY="272.0" text="Return Date">
+               <font>
+                  <Font name="Times New Roman" size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="bkid_return" layoutX="370.0" layoutY="134.0" promptText="Enter book id">
+               <font>
+                  <Font name="Times New Roman" size="18.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="bkTitle_return" layoutX="370.0" layoutY="170.0" prefHeight="26.0" prefWidth="206.0" promptText="Enter the title of the book">
+               <font>
+                  <Font name="Times New Roman" size="18.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="StudId_return" layoutX="371.0" layoutY="208.0" promptText="Enter Student id">
+               <font>
+                  <Font name="Times New Roman" size="18.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="studname_return" layoutX="374.0" layoutY="249.0" prefHeight="26.0" prefWidth="206.0" promptText="Enter student full name">
+               <font>
+                  <Font name="Times New Roman" size="18.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="Stffname_return" layoutX="376.0" layoutY="290.0" prefHeight="26.0" prefWidth="206.0" promptText="Enter staff fullname">
+               <font>
+                  <Font name="Times New Roman" size="18.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="Copies_return" layoutX="740.0" layoutY="171.0" prefHeight="26.0" prefWidth="182.0" promptText="Enter the book copies return">
+               <font>
+                  <Font name="Times New Roman" size="18.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="Datereturn" layoutX="726.0" layoutY="263.0" prefHeight="26.0" prefWidth="182.0" promptText="YYYYY/MM/DD">
+               <font>
+                  <Font name="Times New Roman" size="18.0" />
+               </font>
+            </TextField>
+            <ImageView fitHeight="259.0" fitWidth="200.0" layoutX="21.0" layoutY="55.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../student-carrying-books-showing-education_G1dt5VDd_600x.jpg" />
+               </image>
+            </ImageView>
+            <Label layoutX="623.0" layoutY="141.0" text="Staff ID">
+               <font>
+                  <Font name="Times New Roman" size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="staffid_return" layoutX="736.0" layoutY="132.0" prefHeight="26.0" prefWidth="182.0" promptText="Enter Staff id">
+               <font>
+                  <Font name="Times New Roman" size="18.0" />
+               </font>
+            </TextField>
+            <Label layoutX="622.0" layoutY="226.0" text="Release Date">
+               <font>
+                  <Font name="Times New Roman" size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="ReleaseDate_return" layoutX="735.0" layoutY="217.0" prefHeight="26.0" prefWidth="182.0" promptText="YYYYY/MM/DD">
+               <font>
+                  <Font name="Times New Roman" size="18.0" />
+               </font>
+            </TextField>
+            <Button layoutX="569.0" layoutY="34.0" mnemonicParsing="false" onAction="#Delete_return" prefHeight="34.0" prefWidth="110.0" style="-fx-background-color: #770033;" text="Delete" textFill="#e7e4e4">
+               <font>
+                  <Font name="Times New Roman" size="18.0" />
+               </font></Button>
+            <TextField fx:id="Txt_delete_return" layoutX="701.0" layoutY="34.0" prefHeight="34.0" prefWidth="228.0" promptText="Enter the fullname of student" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

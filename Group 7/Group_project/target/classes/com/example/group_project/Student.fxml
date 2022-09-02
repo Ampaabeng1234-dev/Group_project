@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="462.0" prefWidth="1027.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.group_project.Controllers.StudentController">
+   <children>
+      <Label layoutX="282.0" layoutY="170.0" text="First Name">
+         <font>
+            <Font name="Times New Roman" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="282.0" layoutY="222.0" text="Last Name">
+         <font>
+            <Font name="Times New Roman" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="282.0" layoutY="269.0" text="Gender">
+         <font>
+            <Font name="Times New Roman" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="666.0" layoutY="225.0" text="Year">
+         <font>
+            <Font name="Times New Roman" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="287.0" layoutY="324.0" text="Email">
+         <font>
+            <Font name="Times New Roman" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="666.0" layoutY="271.0" text="Phone Number">
+         <font>
+            <Font name="Times New Roman" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="666.0" layoutY="326.0" text="Address">
+         <font>
+            <Font name="Times New Roman" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="666.0" layoutY="172.0" text="Program">
+         <font>
+            <Font name="Times New Roman" size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="firstname" layoutX="380.0" layoutY="168.0" prefHeight="26.0" prefWidth="253.0" promptText="Enter student first name">
+         <font>
+            <Font name="Times New Roman" size="18.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="lastname" layoutX="380.0" layoutY="213.0" prefHeight="26.0" prefWidth="254.0" promptText="Enter student  last name">
+         <font>
+            <Font name="Times New Roman" size="18.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="Email" layoutX="380.0" layoutY="315.0" prefHeight="26.0" prefWidth="254.0" promptText="Enter student email">
+         <font>
+            <Font name="Times New Roman" size="18.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="Program" layoutX="790.0" layoutY="168.0" prefHeight="26.0" prefWidth="202.0" promptText="Enter student program">
+         <font>
+            <Font name="Times New Roman" size="18.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="year" layoutX="790.0" layoutY="222.0" prefHeight="26.0" prefWidth="202.0" promptText="Enter student level">
+         <font>
+            <Font name="Times New Roman" size="18.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="phone_no" layoutX="790.0" layoutY="267.0" prefHeight="26.0" prefWidth="209.0" promptText="Enter student contact">
+         <font>
+            <Font name="Times New Roman" size="18.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="address" layoutX="790.0" layoutY="321.0" prefHeight="26.0" prefWidth="210.0" promptText="Enter student address">
+         <font>
+            <Font name="Times New Roman" size="18.0" />
+         </font>
+      </TextField>
+      <ComboBox fx:id="Gender" layoutX="380.0" layoutY="268.0" prefHeight="26.0" prefWidth="254.0" promptText="Select gender" />
+      <Separator layoutX="261.0" layoutY="376.0" prefHeight="3.0" prefWidth="764.0" />
+      <Separator layoutX="262.0" layoutY="-1.0" orientation="VERTICAL" prefHeight="462.0" prefWidth="6.0" />
+      <Button fx:id="btn_submit" layoutX="392.0" layoutY="396.0" mnemonicParsing="false" onAction="#Submit" prefHeight="42.0" prefWidth="152.0" text="Submit">
+         <font>
+            <Font name="Times New Roman Bold" size="18.0" />
+         </font>
+      </Button>
+      <Button layoutX="640.0" layoutY="70.0" mnemonicParsing="false" onAction="#Delet" prefHeight="42.0" prefWidth="79.0" text="Delete">
+         <font>
+            <Font name="Times New Roman Bold" size="18.0" />
+         </font>
+      </Button>
+      <TextField fx:id="lastname_del" layoutX="729.0" layoutY="71.0" prefHeight="42.0" prefWidth="226.0" promptText="Enter the lastname to delet">
+         <font>
+            <Font name="Times New Roman" size="18.0" />
+         </font>
+      </TextField>
+      <ImageView fitHeight="201.0" fitWidth="202.0" layoutX="41.0" layoutY="135.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../Student-scholarship.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="btn_back" layoutX="815.0" layoutY="406.0" mnemonicParsing="false" onAction="#btn_backshow" prefHeight="42.0" prefWidth="152.0" text="Back">
+         <font>
+            <Font name="Times New Roman Bold" size="18.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
